@@ -66,7 +66,7 @@ function initializeServiceWorker() {
     //   }
     // });
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
+      navigator.serviceWorker.register('./sw.js', { scope: './' })
         .then((registration) => {
           console.log('Service Worker Registered');
         })
